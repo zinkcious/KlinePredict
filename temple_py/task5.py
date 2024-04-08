@@ -4,7 +4,7 @@ import os
 
 
 if __name__ == '__main__':
-    path = "test_data"  # 文件夹目录
+    path = "../test_data"  # 文件夹目录
     files = os.listdir(path)  # 得到文件夹下的所有文件名称
     df_total = pd.DataFrame()
     for file in files:  # 遍历文件夹

@@ -16,7 +16,7 @@ def get_period(df, num, index):
 
 def get_h_c(df, num, index, close, size):
     try:
-        if index < size - 5:
+        if index < size - num:
             high_max, close_n = get_period(df, num, index)
             # print(high_max)
             # print(close_n)
@@ -65,7 +65,7 @@ if __name__ == '__main__':
     #     print("----------" + stock + "----------Done")
     #     df_B.to_csv('data2/' + stock + '_20230101_20231231_B.csv', index=False)
 
-    path = "data"  # 文件夹目录
+    path = "../data"  # 文件夹目录
     files = os.listdir(path)  # 得到文件夹下的所有文件名称
     df_total = pd.DataFrame()
     for file in files:  # 遍历文件夹
